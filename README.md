@@ -54,6 +54,32 @@ I chose this problem because my brother is a doctor, and I wanted to see whether
 
 Python, scikit-learn, pandas, NumPy, Matplotlib/Seaborn
 
+## How to Run
+
+### Requirements
+
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn
+```
+
+### Run
+
+The dataset loads directly from scikit-learn — no external data file needed.
+
+```bash
+python ml_pipeline.py
+```
+
+### What it does
+
+Running `ml_pipeline.py` will:
+1. Load the Wisconsin Breast Cancer dataset and print basic dataset stats to the console
+2. Run the full EDA → feature selection → model training → evaluation pipeline described above
+3. Generate all 9 figures (EDA, correlation heatmap, PCA/t-SNE, feature F-scores, hyperparameter tuning curves, confusion matrices, ROC curves, metric comparison) and save them to a `figures/` directory (created automatically)
+4. Print cross-validation results, test-set metrics, classification reports, and a final side-by-side summary table for both models to the console
+
+No arguments or configuration needed — it runs end-to-end as a single script.
+
 ## References
 
 1. Wolberg, W.H., Street, W.N., & Mangasarian, O.L. (1995). *Machine learning techniques to diagnose breast cancer from fine-needle aspirates.* Cancer Letters, 77(2-3), 163-171.
